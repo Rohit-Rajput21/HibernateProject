@@ -13,5 +13,6 @@
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <mapping class="org.example.Student"/>
         <mapping class="org.example.Address"/>
+        <mapping class="org.example.Student1"/>
     </session-factory>
 </hibernate-configuration>
