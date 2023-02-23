@@ -11,8 +11,10 @@
         <property name="hbm2ddl.auto">create</property>
         <property name="show_sql">true</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
-        <mapping class="org.example.Student"/>
+      <!--  <mapping class="org.example.Student"/>
         <mapping class="org.example.Address"/>
-        <mapping class="org.example.Student1"/>
+        <mapping class="org.example.Student1"/>  -->
+        <mapping class="org.mapping.Question"/>
+        <mapping class="org.mapping.Answer"/>
     </session-factory>
 </hibernate-configuration>
