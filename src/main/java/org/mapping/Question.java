@@ -1,26 +1,24 @@
 package org.mapping;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Question {
     @Id
     private int question_id;
     private String question;
-    @OneToOne     // uni-directional
-    @JoinColumn(name="a_id")
-    private Answer answer;
+    @OneToMany     // uni-directional
+   // @JoinColumn(name="a_id")
+    private List<Answer> answers;
 
     public Question() {
     }
 
-    public Question(int question_id, String question, Answer answer) {
+    public Question(int question_id, String question, List<Answer> answers) {
         this.question_id = question_id;
         this.question = question;
-        this.answer = answer;
+        this.answers = answers;
     }
 
     public int getQuestion_id() {
@@ -39,11 +37,11 @@ public class Question {
         this.question = question;
     }
 
-    public Answer getAnswer() {
-        return answer;
+    public List<Answer> getAnswers() {
+        return answers;
     }
 
-    public void setAnswer(Answer answer) {
-        this.answer = answer;
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
     }
 }

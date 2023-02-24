@@ -1,8 +1,6 @@
 package org.mapping;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity
 public class Answer {
@@ -10,7 +8,7 @@ public class Answer {
     @Id
     private int answer_id;
     private String answer;
-    @OneToOne(mappedBy ="answer")  // Bi-directional
+    @ManyToOne()  // Bi-directional
     private Question question;
 
     public Answer() {
