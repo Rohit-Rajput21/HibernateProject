@@ -14,7 +14,9 @@
       <!--  <mapping class="org.example.Student"/>
         <mapping class="org.example.Address"/>
         <mapping class="org.example.Student1"/>  -->
-        <mapping class="org.mapping.Question"/>
-        <mapping class="org.mapping.Answer"/>
+      <!--  <mapping class="org.mapping.Question"/>
+        <mapping class="org.mapping.Answer"/>    -->
+        <mapping class="org.map1.Project"/>
+        <mapping class="org.map1.Emp"/>
     </session-factory>
 </hibernate-configuration>
