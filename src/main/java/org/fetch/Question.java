@@ -1,5 +1,6 @@
 package org.fetch;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.List;
@@ -9,7 +10,7 @@ public class Question {
     @Id
     private int question_id;
     private String question;
-    @OneToMany     // uni-directional
+    @OneToMany(mappedBy = "question",fetch = FetchType.EAGER)     // uni-directional
    // @JoinColumn(name="a_id")
     private List<Answer> answers;
 

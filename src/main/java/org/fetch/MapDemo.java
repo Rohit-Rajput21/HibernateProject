@@ -41,7 +41,7 @@ public class MapDemo {
 //        session.save(question);
 //        transaction.commit();
 
-        // lazy
+        // Eager
         Question q=(Question)session.get(Question.class,121);
         System.out.println(q.getQuestion_id());
         System.out.println(q.getQuestion());
